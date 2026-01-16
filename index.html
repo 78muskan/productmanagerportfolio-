@@ -1,0 +1,108 @@
+import React from "react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-indigo-500 to-pink-500 p-6">
+      <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-10">
+        {/* Header */}
+        <header className="flex justify-between items-center mb-16">
+          <h1 className="text-2xl font-bold">Muskan Sahani</h1>
+          <nav className="space-x-6 text-gray-600">
+            <a href="#work">Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#case">Case Studies</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+
+        {/* Hero */}
+        <section className="grid md:grid-cols-2 gap-10 items-center mb-24">
+          <img
+            src="/mnt/data/1735587721555.jpg"
+            className="rounded-2xl shadow"
+          />
+          <div>
+            <h2 className="text-4xl font-bold mb-4">👋 I'm Muskan Sahani — Aspiring Google Associate Product Manager</h2>
+            <p className="text-gray-600 text-lg">
+              Engineering student and product-focused problem solver passionate about building scalable, user‑centric experiences. I combine data, UX, and engineering collaboration to ship impactful products.
+            </p>
+            <p className="mt-4 text-gray-600">
+              Seeking opportunities in Google's Associate Product Manager program to learn, build, and grow products used by millions.
+            </p>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section className="mb-24">
+          <h3 className="text-3xl font-bold mb-8">Core Skills</h3>
+          <div className="grid md:grid-cols-4 gap-6">
+            {["Product Strategy","User Research","Data Analysis","Cross‑functional Leadership","UX Design","Roadmapping","A/B Testing","Agile Execution"].map(s => (
+              <div key={s} className="p-4 rounded-xl bg-gray-50 shadow text-center font-medium">{s}</div>
+            ))}
+          </div>
+        </section>
+
+        {/* Work */}
+        <section id="work" className="mb-24">
+          <h3 className="text-3xl font-bold mb-8">Experience & Projects</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {t:"Blockchain Technology Intern — Vodafone Idea (VOIS)", d:"Completed AICTE + VOIS virtual internship on Blockchain Technology. Analyzed decentralized systems, smart contracts, and proposed product use-cases for real-world adoption."},
+              {t:"Cyber Security Intern — AICTE + Edunet", d:"Completed 6-week internship in Cyber Security. Worked on threat analysis, risk assessment, and user-safety product recommendations."},
+              {t:"Machine Learning for Decision Makers — AWS", d:"Completed AWS certification on ML essentials for business and technical decision making, focusing on data-driven product strategy."}
+            ].map(w => (
+              <div key={w.t} className="p-6 rounded-2xl shadow hover:scale-105 transition">
+                <h4 className="font-semibold mb-2">{w.t}</h4>
+                <p className="text-sm text-gray-600">{w.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Case Studies */}
+        <section id="case" className="mb-24">
+          <h3 className="text-3xl font-bold mb-8">Case Studies (Google Style)</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {t:"Improving Onboarding Conversion", d:"Identified drop‑offs, designed experiments, improved activation by X%."},
+              {t:"Search Experience Redesign", d:"Researched users, built PRD, collaborated with engineers and designers."},
+              {t:"AI Feature Concept", d:"Proposed ML‑powered feature, defined metrics, validated with users."}
+            ].map(c => (
+              <div key={c.t} className="border rounded-2xl p-6 hover:shadow-lg transition">
+                <h4 className="font-semibold">{c.t}</h4>
+                <p className="text-sm text-gray-600 mt-2">{c.d}</p>
+                <button className="mt-4 px-4 py-2 border rounded">View Case Study</button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section className="mb-24">
+          <h3 className="text-3xl font-bold mb-8">Certifications & Training</h3>
+          <ul className="list-disc ml-6 text-gray-600 space-y-2">
+            <li>Blockchain Technology Internship — Vodafone Idea (VOIS) + Connecting Dreams Foundation</li>
+            <li>Cyber Security Internship — AICTE + Edunet Foundation</li>
+            <li>AWS: Machine Learning Essentials for Business & Technical Decision Makers</li>
+            <li>Deloitte Forage: Data Analytics Job Simulation</li>
+          </ul>
+        </section>
+
+        {/* Why Google */}
+        <section className="mb-24">
+          <h3 className="text-3xl font-bold mb-4">Why Google APM</h3>
+          <p className="text-gray-600 max-w-3xl">
+            I'm motivated by Google's mission to organize the world’s information and make it universally accessible and useful. I thrive in ambiguous environments, love learning fast, and enjoy working with engineers, designers, and researchers to solve meaningful problems at scale.
+          </p>
+        </section>
+
+        {/* Contact */}
+        <section id="contact">
+          <h3 className="text-3xl font-bold mb-4">Contact</h3>
+          <p className="text-gray-600">muskansahani@email.com · LinkedIn · GitHub</p>
+        </section>
+      </div>
+    </div>
+  );
+}
+
